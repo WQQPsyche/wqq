@@ -13,8 +13,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
        
         MainViewControllor *mainVC = [MainViewControllor defaultMainViewContoller];
-        [mainVC freshUI];
-        
+        [mainVC viewDidLoad];
         
         
     }

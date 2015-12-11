@@ -6,10 +6,13 @@
 //  Copyright (c) 2015年 qianfeng. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "RootViewController.h"
 
-@interface MainViewControllor : NSObject
+@interface MainViewControllor : RootViewController
 
+@property(nonatomic)NSUInteger currentBattleID;//当前游戏进行到第一关。
+//单例
 + (id)defaultMainViewContoller;
-- (void)freshUI;
+
+
 @end

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5459998C1C192C16002DB3EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459998B1C192C16002DB3EA /* main.m */; };
 		545999941C192C45002DB3EA /* MainViewControllor.m in Sources */ = {isa = PBXBuildFile; fileRef = 545999931C192C45002DB3EA /* MainViewControllor.m */; };
+		5470EBDB1C1AB5470036959B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5470EBDA1C1AB5470036959B /* RootViewController.m */; };
+		5470EBE61C1AC1470036959B /* BattleFiledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5470EBE51C1AC1470036959B /* BattleFiledViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,12 @@
 		5459998B1C192C16002DB3EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		545999921C192C45002DB3EA /* MainViewControllor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewControllor.h; sourceTree = "<group>"; };
 		545999931C192C45002DB3EA /* MainViewControllor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllor.m; sourceTree = "<group>"; };
+		545D46A41C19C0E7007C7E42 /* battle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = battle.plist; path = Resource/battle.plist; sourceTree = SOURCE_ROOT; };
+		5470EBD91C1AB5470036959B /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../ViewController/RootViewController.h; sourceTree = "<group>"; };
+		5470EBDA1C1AB5470036959B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../ViewController/RootViewController.m; sourceTree = "<group>"; };
+		5470EBE11C1AB9420036959B /* PathHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathHeader.h; path = Others/PathHeader.h; sourceTree = "<group>"; };
+		5470EBE41C1AC1470036959B /* BattleFiledViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BattleFiledViewController.h; path = ViewController/BattleFiledViewController.h; sourceTree = SOURCE_ROOT; };
+		5470EBE51C1AC1470036959B /* BattleFiledViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BattleFiledViewController.m; path = ViewController/BattleFiledViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +52,7 @@
 		5459997F1C192C16002DB3EA = {
 			isa = PBXGroup;
 			children = (
+				5470EBE11C1AB9420036959B /* PathHeader.h */,
 				5459998A1C192C16002DB3EA /* DotaGame */,
 				545999891C192C16002DB3EA /* Products */,
 			);
@@ -60,11 +69,24 @@
 		5459998A1C192C16002DB3EA /* DotaGame */ = {
 			isa = PBXGroup;
 			children = (
+				545D46A31C19C0A7007C7E42 /* Resource */,
 				5459998B1C192C16002DB3EA /* main.m */,
+				5470EBD91C1AB5470036959B /* RootViewController.h */,
+				5470EBDA1C1AB5470036959B /* RootViewController.m */,
 				545999921C192C45002DB3EA /* MainViewControllor.h */,
 				545999931C192C45002DB3EA /* MainViewControllor.m */,
+				5470EBE41C1AC1470036959B /* BattleFiledViewController.h */,
+				5470EBE51C1AC1470036959B /* BattleFiledViewController.m */,
 			);
 			path = DotaGame;
+			sourceTree = "<group>";
+		};
+		545D46A31C19C0A7007C7E42 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				545D46A41C19C0E7007C7E42 /* battle.plist */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5459998C1C192C16002DB3EA /* main.m in Sources */,
+				5470EBE61C1AC1470036959B /* BattleFiledViewController.m in Sources */,
 				545999941C192C45002DB3EA /* MainViewControllor.m in Sources */,
+				5470EBDB1C1AB5470036959B /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +265,7 @@
 				545999911C192C16002DB3EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
