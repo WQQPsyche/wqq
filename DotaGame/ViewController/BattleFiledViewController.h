@@ -7,8 +7,9 @@
 //
 
 #import "RootViewController.h"
-//战场
-@interface BattleFiledViewController : RootViewController
+#import "HeroViewController.h"
+//战场界面
+@interface BattleFiledViewController : RootViewController<HeroViewControllerDelegate>
 
 @property(nonatomic)NSUInteger  battleId;
 

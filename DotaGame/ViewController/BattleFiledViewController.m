@@ -7,6 +7,10 @@
 //
 
 #import "BattleFiledViewController.h"
+#import "HeroViewController.h"
+#import "WQQTools.h"
+#import "Hero.h"
+
 #define HERO_ARRAY @[@"力量型",@"智力型",@"敏捷型"]
 @implementation BattleFiledViewController
 {
@@ -17,6 +21,10 @@
     [super viewDidLoad];
     [self createHeroInfoDict];
     [self refreshUI];
+    
+    while (1) {
+        [self scanfData];
+    }
 
 }
 
@@ -49,6 +57,7 @@
         }else{
         
         //英雄
+            [msg appendFormat:@"%@\n",[hero name]];
         }
         
     }
@@ -57,5 +66,41 @@
 
 }
 
+- (void)scanfData{
+    NSLog(@"游戏操作说明:请输入序号，选择你的英雄吧！输入0，返回上一界面\n");
+    int inNum;
+    scanf("%d",&inNum);
+    if (inNum>=1&&inNum<=3) {
+        //选择英雄
+        [self pushHeroViewControllerWithInNum:inNum];
+        
+    }else if (inNum==0){
+    
+    //返回上一界面
+    }else{
+    
+        NSLog(@"输入错误！就你这智商还玩什么游戏！啊！😱😱😿😱😱");
+    
+    }
+
+}
+
+#pragma mark 跳转到英雄的界面
+- (void)pushHeroViewControllerWithInNum:(int)inNum{
+
+    HeroViewController *heroVC = [[HeroViewController alloc] init];
+
+    heroVC.hero_Type = HERO_ARRAY[inNum-1];
+    heroVC.path = [WQQTools plistPathWithHeroType:HERO_ARRAY[inNum-1]];
+    heroVC.delegate = self;
+    [heroVC viewDidLoad];
+}
+
+- (void)receiveHeroData:(Hero *)hero withHeroType:(NSString *)type{
+
+    [_heroInfoDict removeObjectForKey:type];
+    [_heroInfoDict setObject:hero forKey:type];
+    [self refreshUI];
+}
 
 @end

@@ -11,6 +11,12 @@
 		545999941C192C45002DB3EA /* MainViewControllor.m in Sources */ = {isa = PBXBuildFile; fileRef = 545999931C192C45002DB3EA /* MainViewControllor.m */; };
 		5470EBDB1C1AB5470036959B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5470EBDA1C1AB5470036959B /* RootViewController.m */; };
 		5470EBE61C1AC1470036959B /* BattleFiledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5470EBE51C1AC1470036959B /* BattleFiledViewController.m */; };
+		547C52F11C2657370019289F /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C52F01C2657370019289F /* Hero.m */; };
+		547C52FD1C265E680019289F /* Hero_Power.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C52FC1C265E680019289F /* Hero_Power.m */; };
+		547C53001C265E790019289F /* Hero_Quik.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C52FF1C265E790019289F /* Hero_Quik.m */; };
+		547C53031C265E940019289F /* Hero_Intelligence.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C53021C265E940019289F /* Hero_Intelligence.m */; };
+		547C53061C2698E70019289F /* WQQTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C53051C2698E70019289F /* WQQTools.m */; };
+		54CCC1271C212D9D00E3A7C4 /* HeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CCC1261C212D9D00E3A7C4 /* HeroViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,11 +37,26 @@
 		545999921C192C45002DB3EA /* MainViewControllor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewControllor.h; sourceTree = "<group>"; };
 		545999931C192C45002DB3EA /* MainViewControllor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllor.m; sourceTree = "<group>"; };
 		545D46A41C19C0E7007C7E42 /* battle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = battle.plist; path = Resource/battle.plist; sourceTree = SOURCE_ROOT; };
+		545D6BDE1C20456900B9B0C9 /* 力量型英雄.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "力量型英雄.plist"; path = "Resource/力量型英雄.plist"; sourceTree = SOURCE_ROOT; };
+		545D6BDF1C20456900B9B0C9 /* 敏捷型英雄.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "敏捷型英雄.plist"; path = "Resource/敏捷型英雄.plist"; sourceTree = SOURCE_ROOT; };
+		545D6BE01C20456900B9B0C9 /* 智慧型英雄.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "智慧型英雄.plist"; path = "Resource/智慧型英雄.plist"; sourceTree = SOURCE_ROOT; };
 		5470EBD91C1AB5470036959B /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../ViewController/RootViewController.h; sourceTree = "<group>"; };
 		5470EBDA1C1AB5470036959B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../ViewController/RootViewController.m; sourceTree = "<group>"; };
 		5470EBE11C1AB9420036959B /* PathHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathHeader.h; path = Others/PathHeader.h; sourceTree = "<group>"; };
 		5470EBE41C1AC1470036959B /* BattleFiledViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BattleFiledViewController.h; path = ViewController/BattleFiledViewController.h; sourceTree = SOURCE_ROOT; };
 		5470EBE51C1AC1470036959B /* BattleFiledViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BattleFiledViewController.m; path = ViewController/BattleFiledViewController.m; sourceTree = SOURCE_ROOT; };
+		547C52EF1C2657370019289F /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hero.h; path = HeroInfo/Hero.h; sourceTree = "<group>"; };
+		547C52F01C2657370019289F /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hero.m; path = HeroInfo/Hero.m; sourceTree = "<group>"; };
+		547C52FB1C265E680019289F /* Hero_Power.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hero_Power.h; path = HeroInfo/Hero_Power.h; sourceTree = "<group>"; };
+		547C52FC1C265E680019289F /* Hero_Power.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hero_Power.m; path = HeroInfo/Hero_Power.m; sourceTree = "<group>"; };
+		547C52FE1C265E790019289F /* Hero_Quik.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hero_Quik.h; path = HeroInfo/Hero_Quik.h; sourceTree = "<group>"; };
+		547C52FF1C265E790019289F /* Hero_Quik.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hero_Quik.m; path = HeroInfo/Hero_Quik.m; sourceTree = "<group>"; };
+		547C53011C265E940019289F /* Hero_Intelligence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hero_Intelligence.h; path = HeroInfo/Hero_Intelligence.h; sourceTree = "<group>"; };
+		547C53021C265E940019289F /* Hero_Intelligence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hero_Intelligence.m; path = HeroInfo/Hero_Intelligence.m; sourceTree = "<group>"; };
+		547C53041C2698E70019289F /* WQQTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WQQTools.h; path = Others/WQQTools.h; sourceTree = "<group>"; };
+		547C53051C2698E70019289F /* WQQTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WQQTools.m; path = Others/WQQTools.m; sourceTree = "<group>"; };
+		54CCC1251C212D9D00E3A7C4 /* HeroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeroViewController.h; path = ViewController/HeroViewController.h; sourceTree = SOURCE_ROOT; };
+		54CCC1261C212D9D00E3A7C4 /* HeroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeroViewController.m; path = ViewController/HeroViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +73,10 @@
 		5459997F1C192C16002DB3EA = {
 			isa = PBXGroup;
 			children = (
+				547C52EE1C2657130019289F /* HeroInfo */,
 				5470EBE11C1AB9420036959B /* PathHeader.h */,
+				547C53041C2698E70019289F /* WQQTools.h */,
+				547C53051C2698E70019289F /* WQQTools.m */,
 				5459998A1C192C16002DB3EA /* DotaGame */,
 				545999891C192C16002DB3EA /* Products */,
 			);
@@ -77,6 +101,8 @@
 				545999931C192C45002DB3EA /* MainViewControllor.m */,
 				5470EBE41C1AC1470036959B /* BattleFiledViewController.h */,
 				5470EBE51C1AC1470036959B /* BattleFiledViewController.m */,
+				54CCC1251C212D9D00E3A7C4 /* HeroViewController.h */,
+				54CCC1261C212D9D00E3A7C4 /* HeroViewController.m */,
 			);
 			path = DotaGame;
 			sourceTree = "<group>";
@@ -84,9 +110,27 @@
 		545D46A31C19C0A7007C7E42 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				545D6BDE1C20456900B9B0C9 /* 力量型英雄.plist */,
+				545D6BDF1C20456900B9B0C9 /* 敏捷型英雄.plist */,
+				545D6BE01C20456900B9B0C9 /* 智慧型英雄.plist */,
 				545D46A41C19C0E7007C7E42 /* battle.plist */,
 			);
 			name = Resource;
+			sourceTree = "<group>";
+		};
+		547C52EE1C2657130019289F /* HeroInfo */ = {
+			isa = PBXGroup;
+			children = (
+				547C52EF1C2657370019289F /* Hero.h */,
+				547C52F01C2657370019289F /* Hero.m */,
+				547C52FB1C265E680019289F /* Hero_Power.h */,
+				547C52FC1C265E680019289F /* Hero_Power.m */,
+				547C52FE1C265E790019289F /* Hero_Quik.h */,
+				547C52FF1C265E790019289F /* Hero_Quik.m */,
+				547C53011C265E940019289F /* Hero_Intelligence.h */,
+				547C53021C265E940019289F /* Hero_Intelligence.m */,
+			);
+			name = HeroInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,10 +189,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547C53031C265E940019289F /* Hero_Intelligence.m in Sources */,
 				5459998C1C192C16002DB3EA /* main.m in Sources */,
+				547C52F11C2657370019289F /* Hero.m in Sources */,
 				5470EBE61C1AC1470036959B /* BattleFiledViewController.m in Sources */,
 				545999941C192C45002DB3EA /* MainViewControllor.m in Sources */,
+				547C53061C2698E70019289F /* WQQTools.m in Sources */,
+				54CCC1271C212D9D00E3A7C4 /* HeroViewController.m in Sources */,
+				547C53001C265E790019289F /* Hero_Quik.m in Sources */,
 				5470EBDB1C1AB5470036959B /* RootViewController.m in Sources */,
+				547C52FD1C265E680019289F /* Hero_Power.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
