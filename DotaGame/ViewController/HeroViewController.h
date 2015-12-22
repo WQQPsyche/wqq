@@ -14,7 +14,8 @@
 //定义协议 将选中的英雄传回BattleViewController界面
 @protocol HeroViewControllerDelegate <NSObject>
 
-- (void)receiveHeroData:(HeroModel*)hero andEnemyHero:(HeroModel*)enemyHero withHeroType:(NSString*)type;
+- (void)receiveHeroData:(HeroModel*)hero  withHeroType:(NSString*)type;
+- (void)receiveEnemyHeros:(HeroModel *)Enemy_hero withHeroType:(NSString *)type;
 
 @end
 
@@ -22,5 +23,9 @@
 @property(nonatomic,copy)NSString *hero_Type;//英雄类型
 @property(nonatomic,copy)NSString *path;//plist文件的路径
 @property(nonatomic,weak)id<HeroViewControllerDelegate>delegate;
+
+//选择敌方战队
+- (void)chooseEnemySqquardronHeros;
+
 
 @end

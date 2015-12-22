@@ -84,10 +84,10 @@
         _isGoBack = YES;
         //选择好了英雄回传英雄的数据
         //产生一个随机数 去为敌方选择英雄
-        int enemy_Hero_Num = arc4random()%10;
+//        int enemy_Hero_Num = arc4random()%10;
 //        NSLog(@"*****%d\n",enemy_Hero_Num);
-        [self.delegate receiveHeroData:_heroInfosArray[num-1] andEnemyHero:_heroInfosArray[enemy_Hero_Num] withHeroType:self.hero_Type ];
-//        [self.delegate receiveHeroData:_heroInfosArray[num-1] withHeroType:self.hero_Type];
+//        [self.delegate receiveHeroData:_heroInfosArray[num-1] andEnemyHero:_heroInfosArray[enemy_Hero_Num] withHeroType:self.hero_Type ];
+        [self.delegate receiveHeroData:_heroInfosArray[num-1] withHeroType:self.hero_Type];
     
     }else{
         NSLog(@"输入有误！");
@@ -95,5 +95,11 @@
 
 }
 
+- (void)chooseEnemySqquardronHeros{
+    [self createHeroInfoArray];
+    int enemy_Hero_Num = arc4random()%10;
+    [self.delegate receiveEnemyHeros:_heroInfosArray[enemy_Hero_Num] withHeroType:self.hero_Type];
+
+}
 
 @end
