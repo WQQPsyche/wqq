@@ -13,7 +13,7 @@
  */
 #import <Foundation/Foundation.h>
 
-@interface Hero : NSObject
+@interface HeroModel : NSObject
 @property(nonatomic,copy)NSString *name; //姓名
 @property(nonatomic,copy)NSString *MP; //生命值
 @property(nonatomic,copy)NSString *ATK;//攻击力

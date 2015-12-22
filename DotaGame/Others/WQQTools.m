@@ -25,9 +25,9 @@
 
     NSDictionary *heroClassDict = @{
                                     
-                                    @"力量型":@"Hero_Power",
-                                    @"智力型":@"Hero_Intelligence",
-                                    @"敏捷型":@"Hero_Quik"
+                                    @"力量型":@"Hero_PowerModel",
+                                    @"智力型":@"Hero_IntelligenceModel",
+                                    @"敏捷型":@"Hero_QuikModel"
                                     
                                     };
     

@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 qianfeng. All rights reserved.
 //
 
-#import "Hero_Power.h"
+#import "Hero_PowerModel.h"
 
-@implementation Hero_Power
+@implementation Hero_PowerModel
 - (instancetype)initWithInfoDict:(NSDictionary *)infoDict{
     if (self = [super initWithInfoDict:infoDict]) {
         self.protect = [infoDict objectForKey:@"护盾"];

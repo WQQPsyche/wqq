@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>mission</key>
+		<integer>1</integer>
 		<key>isPass</key>
 		<false/>
 		<key>description</key>
@@ -11,6 +13,8 @@
 		<string>异传送阵</string>
 	</dict>
 	<dict>
+		<key>mission</key>
+		<integer>2</integer>
 		<key>isPass</key>
 		<false/>
 		<key>description</key>
@@ -19,6 +23,8 @@
 		<string>忠诚的证明</string>
 	</dict>
 	<dict>
+		<key>mission</key>
+		<integer>3</integer>
 		<key>isPass</key>
 		<false/>
 		<key>description</key>
@@ -27,6 +33,8 @@
 		<string>异界战场</string>
 	</dict>
 	<dict>
+		<key>mission</key>
+		<integer>4</integer>
 		<key>isPass</key>
 		<false/>
 		<key>description</key>
@@ -35,7 +43,9 @@
 		<string>军营</string>
 	</dict>
 	<dict>
-		<key>New item</key>
+		<key>mission</key>
+		<integer>5</integer>
+		<key>isPass</key>
 		<false/>
 		<key>description</key>
 		<string>倒下的骷髅王再次站起来，带领更多的怪物向你冲来。</string>
@@ -43,6 +53,8 @@
 		<string>埋骨场</string>
 	</dict>
 	<dict>
+		<key>mission</key>
+		<integer>6</integer>
 		<key>isPass</key>
 		<false/>
 		<key>description</key>
@@ -51,6 +63,8 @@
 		<string>异全军出击</string>
 	</dict>
 	<dict>
+		<key>mission</key>
+		<integer>7</integer>
 		<key>isPass</key>
 		<false/>
 		<key>description</key>
@@ -59,6 +73,8 @@
 		<string>歌声中的回忆</string>
 	</dict>
 	<dict>
+		<key>mission</key>
+		<integer>8</integer>
 		<key>isPass</key>
 		<false/>
 		<key>description</key>
@@ -67,6 +83,8 @@
 		<string>战场中央</string>
 	</dict>
 	<dict>
+		<key>mission</key>
+		<integer>9</integer>
 		<key>isPass</key>
 		<false/>
 		<key>description</key>

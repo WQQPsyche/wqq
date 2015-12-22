@@ -8,7 +8,7 @@
 
 #import "HeroViewController.h"
 #import "WQQTools.h"
-#import "Hero.h"
+
 
 @implementation HeroViewController
 {
@@ -51,7 +51,7 @@
     //根据英雄的类型获取类名
     Class HeroClass = [WQQTools HeroClassWithHeroType:self.hero_Type];
     for (NSDictionary *dict in heroInfos) {
-         Hero *hero = [[HeroClass alloc] init];
+         HeroModel *hero = [[HeroClass alloc] init];
         [hero setHeroInfoWithDict:dict];
         [_heroInfosArray addObject:hero];
     }
@@ -65,7 +65,7 @@
 
     NSMutableString *HeroStr = [[NSMutableString alloc] initWithFormat:@"\n👊👊👊👊👊👊👊👊👊👊👊👊👊👊👊👊👊👊👊👊👊👊👊👊\n        👊👊👊选择你的%@英雄吧！👊👊👊",self.hero_Type];
     int i = 1;
-    for (Hero *hero in _heroInfosArray) {
+    for (HeroModel *hero in _heroInfosArray) {
         [HeroStr appendFormat:@"\n【%d】%@\n",i++,hero];
         
     }
@@ -80,10 +80,14 @@
     NSLog(@"%@",str);
     int num;
     scanf("%d",&num);
-    if (num>=1&&num<10) {
+    if (num>=1&&num<=10) {
         _isGoBack = YES;
         //选择好了英雄回传英雄的数据
-        [self.delegate receiveHeroData:_heroInfosArray[num-1] withHeroType:self.hero_Type];
+        //产生一个随机数 去为敌方选择英雄
+        int enemy_Hero_Num = arc4random()%10;
+//        NSLog(@"*****%d\n",enemy_Hero_Num);
+        [self.delegate receiveHeroData:_heroInfosArray[num-1] andEnemyHero:_heroInfosArray[enemy_Hero_Num] withHeroType:self.hero_Type ];
+//        [self.delegate receiveHeroData:_heroInfosArray[num-1] withHeroType:self.hero_Type];
     
     }else{
         NSLog(@"输入有误！");

@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 qianfeng. All rights reserved.
 //
 
-#import "Hero.h"
+#import "HeroModel.h"
 
-@implementation Hero
+@implementation HeroModel
 - (instancetype)initWithInfoDict:(NSDictionary *)infoDict{
     if (self = [super init]) {
         self.name = [infoDict objectForKey:@"name"];

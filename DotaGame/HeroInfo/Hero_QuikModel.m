@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 qianfeng. All rights reserved.
 //
 
-#import "Hero_Quik.h"
+#import "Hero_QuikModel.h"
 
-@implementation Hero_Quik
+@implementation Hero_QuikModel
 
 - (instancetype)initWithInfoDict:(NSDictionary *)infoDict{
     if (self = [super initWithInfoDict:infoDict]) {

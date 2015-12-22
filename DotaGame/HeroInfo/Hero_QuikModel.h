@@ -9,9 +9,9 @@
  敏捷型英雄特有的属性
  闪避
  */
-#import "Hero.h"
+#import "HeroModel.h"
 
-@interface Hero_Quik : Hero
+@interface Hero_QuikModel : HeroModel
 @property(nonatomic,copy)NSString *dodge;//闪避
 
 @end

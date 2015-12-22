@@ -9,12 +9,12 @@
  展示可供选择的英雄的界面
  */
 #import "RootViewController.h"
-#import "Hero.h"
+#import "HeroModel.h"
 
 //定义协议 将选中的英雄传回BattleViewController界面
 @protocol HeroViewControllerDelegate <NSObject>
 
-- (void)receiveHeroData:(Hero*)hero withHeroType:(NSString*)type;
+- (void)receiveHeroData:(HeroModel*)hero andEnemyHero:(HeroModel*)enemyHero withHeroType:(NSString*)type;
 
 @end
 

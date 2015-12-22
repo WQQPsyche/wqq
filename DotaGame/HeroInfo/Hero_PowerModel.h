@@ -9,9 +9,9 @@
  力量型英雄特有的属性
  护盾
  */
-#import "Hero.h"
+#import "HeroModel.h"
 
-@interface Hero_Power : Hero
+@interface Hero_PowerModel : HeroModel
 @property(nonatomic,copy)NSString *protect;
 
 @end

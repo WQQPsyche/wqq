@@ -10,5 +10,8 @@
 #import "PathHeader.h"
 
 @interface RootViewController : NSObject
+
+@property(nonatomic,strong) NSMutableArray * pushedViewControllers;
+
 - (void)viewDidLoad;
 @end

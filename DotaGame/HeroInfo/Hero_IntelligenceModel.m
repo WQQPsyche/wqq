@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 qianfeng. All rights reserved.
 //
 
-#import "Hero_Intelligence.h"
+#import "Hero_IntelligenceModel.h"
 
-@implementation Hero_Intelligence
+@implementation Hero_IntelligenceModel
 - (instancetype)initWithInfoDict:(NSDictionary *)infoDict{
     if (self = [super initWithInfoDict:infoDict]) {
        self.magic = [infoDict objectForKey:@"魔法强度"];

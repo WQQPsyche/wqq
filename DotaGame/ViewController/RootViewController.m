@@ -9,8 +9,19 @@
 #import "RootViewController.h"
 
 @implementation RootViewController
-- (void)viewDidLoad{
 
+- (instancetype)init{
+    if (self = [super init]) {
+
+        self.pushedViewControllers = [[NSMutableArray alloc] init];
+    }
+
+    return self;
+}
+
+- (void)viewDidLoad{
+    //将自己添加到 数组中
+    [self.pushedViewControllers addObject:self];
 
 }
 

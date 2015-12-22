@@ -9,17 +9,19 @@
 #import "BattleFiledViewController.h"
 #import "HeroViewController.h"
 #import "WQQTools.h"
-#import "Hero.h"
+#import "HeroModel.h"
 
 #define HERO_ARRAY @[@"力量型",@"智力型",@"敏捷型"]
 @implementation BattleFiledViewController
-{
-    NSMutableDictionary *_heroInfoDict;
-}
+
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [self createHeroInfoDict];
+    //创建我方战队
+    [self createMySqquadron];
+    //创建敌方战队
+    [self createEnemySqquadron];
+    
     [self refreshUI];
     
     while (1) {
@@ -28,28 +30,37 @@
 
 }
 
-//创建该战场的英雄信息
-- (void)createHeroInfoDict{
-    _heroInfoDict = [[NSMutableDictionary alloc] init];
+//创建我方战队
+- (void)createMySqquadron{
+    self.battle.MySqquadron = [[NSMutableDictionary alloc] init];
     
     for (NSString *hero in HERO_ARRAY) {
-        [_heroInfoDict setObject:[NSNull null] forKey:hero];
+        [self.battle.MySqquadron setObject:[NSNull null] forKey:hero];
     }
     
 }
+//创建敌方战队 每次创建我方战队时，顺便随机一个数去创建敌方战队
+- (void)createEnemySqquadron{
+    self.battle.enmeySquadron = [[NSMutableDictionary alloc] init];
+    for (NSString *hero in HERO_ARRAY) {
+        [self.battle.enmeySquadron setObject:[NSNull null] forKey:hero];
+    }
+
+}
+
+
+
 
 //刷新UI
 - (void)refreshUI{
     
     NSMutableString *msg = [[NSMutableString alloc] init];
-    NSArray * battles = [[NSArray alloc] initWithContentsOfFile:BATTLE_PATH];
-    NSDictionary *battleInfo = battles[self.battleId];
     
-    [msg appendFormat:@"\n%@\n",battleInfo[@"description"]];
-    
+    [msg appendFormat:@"\n%@\n",self.battle.descri];
+    [msg appendFormat:@"😺😺😺😺😺😺😺我方战队😺😺😺😺😺😺\n"];
     int i = 1;
-    for (NSString *str in _heroInfoDict) {
-        id hero = _heroInfoDict[str];
+    for (NSString *str in self.battle.MySqquadron) {
+        id hero = self.battle.MySqquadron[str];
         
         [msg appendFormat:@"【%d】 【%@】  ",i++,str];
         if (hero == [NSNull null]) {
@@ -61,6 +72,23 @@
         }
         
     }
+    [msg appendFormat:@"💀💀💀💀💀💀💀敌方战队💀💀💀💀💀💀💀\n"];
+    for (NSString *str in self.battle.enmeySquadron) {
+        id hero = self.battle.enmeySquadron[str];
+        
+        [msg appendFormat:@"【%d】 【%@】  ",i++,str];
+        if (hero == [NSNull null]) {
+            [msg appendFormat:@"(请选择)\n"];
+        }else{
+            
+            //英雄
+            [msg appendFormat:@"%@\n",[hero name]];
+        }
+        
+    }
+
+    
+    
     
     NSLog(@"%@",msg);
 
@@ -96,11 +124,15 @@
     [heroVC viewDidLoad];
 }
 
-- (void)receiveHeroData:(Hero *)hero withHeroType:(NSString *)type{
+- (void)receiveHeroData:(HeroModel*)hero andEnemyHero:(HeroModel*)enemyHero withHeroType:(NSString*)type{
 
-    [_heroInfoDict removeObjectForKey:type];
-    [_heroInfoDict setObject:hero forKey:type];
+    [self.battle.MySqquadron removeObjectForKey:type];
+    [self.battle.MySqquadron setObject:hero forKey:type];
+    
+    [self.battle.enmeySquadron removeObjectForKey:type];
+    [self.battle.enmeySquadron setObject:enemyHero forKey:type];
     [self refreshUI];
 }
+
 
 @end

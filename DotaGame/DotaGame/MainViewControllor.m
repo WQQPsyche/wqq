@@ -8,10 +8,11 @@
 
 #import "MainViewControllor.h"
 #import "BattleFiledViewController.h"
+#import "BattleModel.h"
 
 @implementation MainViewControllor
 {
-    NSArray *_map;//存储关卡的信息
+    NSMutableArray *_map;//存储关卡的信息
     //增加经验值，开启下一章地图
 }
 +(id)defaultMainViewContoller{
@@ -29,7 +30,7 @@
     [super viewDidLoad];
     
     //创建关卡列表的数组
-    [self createDictData];
+    [self createAllBattleData];
 
     //创建UI界面
     [self refreshUI];
@@ -41,21 +42,36 @@
 }
 
 //初始化字典的内容
-- (void)createDictData{
+- (void)createAllBattleData{
     
-    _map = [[NSArray alloc] initWithContentsOfFile:BATTLE_PATH];
+    
+    _map = [[NSMutableArray alloc] init];
+    
+    NSArray *battleArray = [[NSArray alloc] initWithContentsOfFile:BATTLE_PATH];
+    
+    for (NSDictionary *battleDict in battleArray) {
+        
+        BattleModel * model = [[BattleModel alloc] init];
+        model.name = battleDict[@"name"];
+        model.mission = [battleDict[@"mission"] integerValue];
+        model.descri = battleDict[@"description"];
+        model.isPassed = [battleDict[@"isPass"] boolValue];
+        model.MySqquadron = nil;
+        model.enmeySquadron = nil;
+        [_map addObject:model];
+    }
     
 }
 
 - (void)refreshUI{
     NSMutableString *msg = [[NSMutableString alloc] initWithString:@"   刀塔传奇\n"];
     for (int i = 0; i<_map.count; i++) {
-        NSDictionary *dict = _map[i];
-        [msg appendFormat:@"【第%d关】 %@  ",i+1,dict[@"name"]];
-        if ([dict[@"isPass"] boolValue]==YES) {
+        BattleModel *model = _map[i];
+        
+        [msg appendFormat:@"【第%ld关】 %@  ",model.mission,model.name];
+        if (model.isPassed==YES) {
             [msg appendFormat:@"【通关】\n"];
         }else{
-            
             [msg appendFormat:@"【未通关】\n"];
         }
         
@@ -78,20 +94,28 @@
     
         [self refreshUI];
     }else {
-    
-        [self pushViewControllerWithId:inData];
-    }
+    //跳转到下一个界面,参数 所选的战役
+        
+        for (BattleModel *model in _map) {
+            if (model.mission == inData) {
+                [self pushViewControllerWithBattle:model];
+            }
+        }
+        
+        
+}
     
 }
 
 
 #pragma mark 推出到战场界面
 
-- (void)pushViewControllerWithId:(NSUInteger)gameId{
-    BattleFiledViewController *battle = [[BattleFiledViewController alloc] init];
-    battle.battleId = gameId;
-    [battle viewDidLoad];
-}
+- (void)pushViewControllerWithBattle:(BattleModel*)battle{
+    BattleFiledViewController *battleVC = [[BattleFiledViewController alloc] init];
+    battleVC.battle = battle;
+    [battleVC viewDidLoad];
+    
+   }
 
 
 

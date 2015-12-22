@@ -8,10 +8,12 @@
 
 #import "RootViewController.h"
 #import "HeroViewController.h"
+#import "BattleModel.h"
+
 //战场界面
 @interface BattleFiledViewController : RootViewController<HeroViewControllerDelegate>
 
-@property(nonatomic)NSUInteger  battleId;
+@property(nonatomic,strong)BattleModel *battle;
 
 - (void)refreshUI;
 @end

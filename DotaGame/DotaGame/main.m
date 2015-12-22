@@ -15,7 +15,7 @@ int main(int argc, const char * argv[]) {
         MainViewControllor *mainVC = [MainViewControllor defaultMainViewContoller];
         [mainVC viewDidLoad];
         
-        
+//        NSArray *array = @[@{@"name":}]
         
         
         
