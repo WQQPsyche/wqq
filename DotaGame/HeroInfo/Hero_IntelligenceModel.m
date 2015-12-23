@@ -9,18 +9,17 @@
 #import "Hero_IntelligenceModel.h"
 
 @implementation Hero_IntelligenceModel
-- (instancetype)initWithInfoDict:(NSDictionary *)infoDict{
-    if (self = [super initWithInfoDict:infoDict]) {
-       self.magic = [infoDict objectForKey:@"魔法强度"];
-    }
-    
-    return self;
-}
+
 
 - (void)setHeroInfoWithDict:(NSDictionary *)infoDict{
 
     [super setHeroInfoWithDict:infoDict];
     self.magic = [infoDict objectForKey:@"魔法强度"];
+    HeroTypeModel * heroTypeModel = [[HeroTypeModel alloc] init];
+    heroTypeModel.hero_type = Hero_PowerType;
+    //获取本类的类名
+    heroTypeModel.heroTypeName = NSStringFromClass([self class]);
+    self.heroType = heroTypeModel;
 }
 
 - (NSString *)description{

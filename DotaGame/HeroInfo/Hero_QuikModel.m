@@ -10,17 +10,16 @@
 
 @implementation Hero_QuikModel
 
-- (instancetype)initWithInfoDict:(NSDictionary *)infoDict{
-    if (self = [super initWithInfoDict:infoDict]) {
-        self.dodge = [infoDict objectForKey:@"闪避"];
-    }
-    return self;
-}
 
 - (void)setHeroInfoWithDict:(NSDictionary *)infoDict{
 
     [super setHeroInfoWithDict:infoDict];
     self.dodge = [infoDict objectForKey:@"闪避"];
+    HeroTypeModel * heroTypeModel = [[HeroTypeModel alloc] init];
+    heroTypeModel.hero_type = Hero_PowerType;
+    //获取本类的类名
+    heroTypeModel.heroTypeName = NSStringFromClass([self class]);
+    self.heroType = heroTypeModel;
 
 }
 - (NSString *)description{

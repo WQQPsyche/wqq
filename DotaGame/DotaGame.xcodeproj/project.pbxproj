@@ -45,7 +45,7 @@
 		545D6BE01C20456900B9B0C9 /* 智慧型英雄.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "智慧型英雄.plist"; path = "Resource/智慧型英雄.plist"; sourceTree = SOURCE_ROOT; };
 		5470EBD91C1AB5470036959B /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../ViewController/RootViewController.h; sourceTree = "<group>"; };
 		5470EBDA1C1AB5470036959B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../ViewController/RootViewController.m; sourceTree = "<group>"; };
-		5470EBE11C1AB9420036959B /* PathHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathHeader.h; path = Others/PathHeader.h; sourceTree = "<group>"; };
+		5470EBE11C1AB9420036959B /* PathHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathHeader.h; path = ../Others/PathHeader.h; sourceTree = "<group>"; };
 		5470EBE41C1AC1470036959B /* BattleFiledViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BattleFiledViewController.h; path = ViewController/BattleFiledViewController.h; sourceTree = SOURCE_ROOT; };
 		5470EBE51C1AC1470036959B /* BattleFiledViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BattleFiledViewController.m; path = ViewController/BattleFiledViewController.m; sourceTree = SOURCE_ROOT; };
 		547C52EF1C2657370019289F /* HeroModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeroModel.h; path = HeroInfo/HeroModel.h; sourceTree = "<group>"; };
@@ -56,8 +56,8 @@
 		547C52FF1C265E790019289F /* Hero_QuikModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hero_QuikModel.m; path = HeroInfo/Hero_QuikModel.m; sourceTree = "<group>"; };
 		547C53011C265E940019289F /* Hero_IntelligenceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hero_IntelligenceModel.h; path = HeroInfo/Hero_IntelligenceModel.h; sourceTree = "<group>"; };
 		547C53021C265E940019289F /* Hero_IntelligenceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hero_IntelligenceModel.m; path = HeroInfo/Hero_IntelligenceModel.m; sourceTree = "<group>"; };
-		547C53041C2698E70019289F /* WQQTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WQQTools.h; path = Others/WQQTools.h; sourceTree = "<group>"; };
-		547C53051C2698E70019289F /* WQQTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WQQTools.m; path = Others/WQQTools.m; sourceTree = "<group>"; };
+		547C53041C2698E70019289F /* WQQTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WQQTools.h; path = ../Others/WQQTools.h; sourceTree = "<group>"; };
+		547C53051C2698E70019289F /* WQQTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WQQTools.m; path = ../Others/WQQTools.m; sourceTree = "<group>"; };
 		5486E96D1C27C6B600E0B55B /* HeroTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeroTypeModel.h; path = HeroInfo/HeroTypeModel.h; sourceTree = "<group>"; };
 		5486E96E1C27C6B600E0B55B /* HeroTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeroTypeModel.m; path = HeroInfo/HeroTypeModel.m; sourceTree = "<group>"; };
 		5486E9701C27C95900E0B55B /* DotaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DotaModel.h; path = Others/DotaModel.h; sourceTree = SOURCE_ROOT; };
@@ -82,10 +82,6 @@
 		5459997F1C192C16002DB3EA = {
 			isa = PBXGroup;
 			children = (
-				547C52EE1C2657130019289F /* HeroInfo */,
-				5470EBE11C1AB9420036959B /* PathHeader.h */,
-				547C53041C2698E70019289F /* WQQTools.h */,
-				547C53051C2698E70019289F /* WQQTools.m */,
 				5459998A1C192C16002DB3EA /* DotaGame */,
 				545999891C192C16002DB3EA /* Products */,
 			);
@@ -103,19 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				545D46A31C19C0A7007C7E42 /* Resource */,
+				5481830E1C2A699F003BA9E3 /* Tool */,
+				547C52EE1C2657130019289F /* Model */,
+				5481830D1C2A6970003BA9E3 /* ViewController */,
 				5459998B1C192C16002DB3EA /* main.m */,
-				5470EBD91C1AB5470036959B /* RootViewController.h */,
-				5470EBDA1C1AB5470036959B /* RootViewController.m */,
-				545999921C192C45002DB3EA /* MainViewControllor.h */,
-				545999931C192C45002DB3EA /* MainViewControllor.m */,
-				5470EBE41C1AC1470036959B /* BattleFiledViewController.h */,
-				5470EBE51C1AC1470036959B /* BattleFiledViewController.m */,
-				54CCC1251C212D9D00E3A7C4 /* HeroViewController.h */,
-				54CCC1261C212D9D00E3A7C4 /* HeroViewController.m */,
-				5486E9701C27C95900E0B55B /* DotaModel.h */,
-				5486E9711C27C95900E0B55B /* DotaModel.m */,
-				5486E9731C27CA0000E0B55B /* BattleModel.h */,
-				5486E9741C27CA0000E0B55B /* BattleModel.m */,
 			);
 			path = DotaGame;
 			sourceTree = "<group>";
@@ -131,9 +118,13 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
-		547C52EE1C2657130019289F /* HeroInfo */ = {
+		547C52EE1C2657130019289F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5486E9701C27C95900E0B55B /* DotaModel.h */,
+				5486E9711C27C95900E0B55B /* DotaModel.m */,
+				5486E9731C27CA0000E0B55B /* BattleModel.h */,
+				5486E9741C27CA0000E0B55B /* BattleModel.m */,
 				547C52EF1C2657370019289F /* HeroModel.h */,
 				547C52F01C2657370019289F /* HeroModel.m */,
 				547C52FB1C265E680019289F /* Hero_PowerModel.h */,
@@ -145,7 +136,33 @@
 				5486E96D1C27C6B600E0B55B /* HeroTypeModel.h */,
 				5486E96E1C27C6B600E0B55B /* HeroTypeModel.m */,
 			);
-			name = HeroInfo;
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5481830D1C2A6970003BA9E3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5470EBD91C1AB5470036959B /* RootViewController.h */,
+				5470EBDA1C1AB5470036959B /* RootViewController.m */,
+				545999921C192C45002DB3EA /* MainViewControllor.h */,
+				545999931C192C45002DB3EA /* MainViewControllor.m */,
+				5470EBE41C1AC1470036959B /* BattleFiledViewController.h */,
+				5470EBE51C1AC1470036959B /* BattleFiledViewController.m */,
+				54CCC1251C212D9D00E3A7C4 /* HeroViewController.h */,
+				54CCC1261C212D9D00E3A7C4 /* HeroViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		5481830E1C2A699F003BA9E3 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				5470EBE11C1AB9420036959B /* PathHeader.h */,
+				547C53041C2698E70019289F /* WQQTools.h */,
+				547C53051C2698E70019289F /* WQQTools.m */,
+			);
+			name = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

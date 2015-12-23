@@ -9,17 +9,16 @@
 #import "Hero_PowerModel.h"
 
 @implementation Hero_PowerModel
-- (instancetype)initWithInfoDict:(NSDictionary *)infoDict{
-    if (self = [super initWithInfoDict:infoDict]) {
-        self.protect = [infoDict objectForKey:@"护盾"];
-    }
 
-    return self;
-}
 
 - (void)setHeroInfoWithDict:(NSDictionary *)infoDict{
     [super setHeroInfoWithDict:infoDict];
     self.protect = [infoDict objectForKey:@"护盾"];
+    HeroTypeModel * heroTypeModel = [[HeroTypeModel alloc] init];
+    heroTypeModel.hero_type = Hero_PowerType;
+    //获取本类的类名
+    heroTypeModel.heroTypeName = NSStringFromClass([self class]);
+    self.heroType = heroTypeModel;
 
 
 }

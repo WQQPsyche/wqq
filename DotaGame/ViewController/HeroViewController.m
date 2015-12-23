@@ -53,6 +53,8 @@
     for (NSDictionary *dict in heroInfos) {
          HeroModel *hero = [[HeroClass alloc] init];
         [hero setHeroInfoWithDict:dict];
+        //设置英雄的类型
+        hero.HeroType = self.hero_Type;
         [_heroInfosArray addObject:hero];
     }
 

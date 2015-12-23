@@ -10,18 +10,23 @@
 #import "HeroViewController.h"
 #import "WQQTools.h"
 #import "HeroModel.h"
+#import "Hero_PowerModel.h"
+#import "Hero_QuikModel.h"
+#import "Hero_IntelligenceModel.h"
+
 
 #define HERO_ARRAY @[@"力量型",@"智力型",@"敏捷型"]
 @implementation BattleFiledViewController
 {
     BOOL _isReady;//是否可以开始战斗
+    BOOL _goBack;
 
 }
 
 - (void)viewDidLoad{
     [super viewDidLoad];
     _isReady = NO;
-    
+    _goBack = NO;
     //创建我方战队
     [self createMySqquadron];
     //创建敌方战队,随机产生敌方战队的英雄
@@ -30,7 +35,7 @@
     [self refreshUI];
     
     
-    while (1) {
+    while (!_goBack) {
         
         //检测是否开始战斗
         [self isChooseOverHeros];
@@ -39,8 +44,10 @@
             //开始战斗
             [self warBreakOut];
         }
+        if (!_goBack) {
+            [self scanfData];
+        }
         
-        [self scanfData];
     }
     
 
@@ -104,15 +111,64 @@
     int time = rand()%2+2;
     sleep(time);
 
-    //战斗力 = 攻击力 - 敌方的抵抗
-    //计算双方的攻击力 抵抗伤害的能力
+    //战斗力 = 攻击力 - 敌方的护甲
+    //攻击力= all ATK + 魔法强度
+    //护甲  = 护盾*2 + 闪避*2;
     
-//    for (HeroModel *model in self.battle.MySqquadron) {
-//        
-//    }
+    //计算双方的战斗力
+    NSInteger myATK = 0,myArmor = 0,enemyATK = 0 ,enemyArmor = 0;
+    
+    for (NSString *strHeroType in self.battle.MySqquadron) {
+        if ([strHeroType isEqualToString:@"力量型"]) {
+            Hero_PowerModel * powerHero = [self.battle.MySqquadron objectForKey:strHeroType];
+            myATK += [powerHero.ATK integerValue];
+            myArmor += [powerHero.protect integerValue]*2;
+        }
+        if ([strHeroType isEqualToString:@"智力型"]) {
+            Hero_IntelligenceModel * intelligenceHero = [self.battle.MySqquadron objectForKey:strHeroType];
+            myATK += [intelligenceHero.ATK integerValue];
+            myATK += [intelligenceHero.magic integerValue];
+        }
+        
+        if ([strHeroType isEqualToString:@"敏捷型"]) {
+            Hero_QuikModel * quickHero = [self.battle.MySqquadron objectForKey:strHeroType];
+            myATK += [quickHero.ATK integerValue];
+            myArmor += [quickHero.dodge integerValue]*2;
+        }
+    }
     
     
+    for (NSString *strHeroType in self.battle.enmeySquadron) {
+        if ([strHeroType isEqualToString:@"力量型"]) {
+            Hero_PowerModel * powerHero = [self.battle.enmeySquadron objectForKey:strHeroType];
+            enemyATK += [powerHero.ATK integerValue];
+            enemyArmor += [powerHero.protect integerValue]*2;
+        }
+        if ([strHeroType isEqualToString:@"智力型"]) {
+            Hero_IntelligenceModel * intelligenceHero = [self.battle.enmeySquadron objectForKey:strHeroType];
+            enemyATK += [intelligenceHero.ATK integerValue];
+            enemyATK += [intelligenceHero.magic integerValue];
+        }
+        
+        if ([strHeroType isEqualToString:@"敏捷型"]) {
+            Hero_QuikModel * quickHero = [self.battle.enmeySquadron objectForKey:strHeroType];
+            enemyATK += [quickHero.ATK integerValue];
+            enemyArmor += [quickHero.dodge integerValue]*2;
+        }
+        
+        
+    }
+NSLog(@"%ld-%ld-%ld-%ld\n",myATK,myArmor,enemyATK,enemyArmor);
+    if ((myATK-enemyArmor)-(enemyATK-myArmor)>100) {
+        NSLog(@"你赢了！");
+    }else{
+        NSLog(@"你输了！");
+    }
     
+    sleep(1);
+    
+    
+    _goBack = YES;
 
 }
 

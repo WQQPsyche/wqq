@@ -12,6 +12,7 @@
  姓名、生命值、攻击力、力量、敏捷、智力
  */
 #import <Foundation/Foundation.h>
+#import "HeroTypeModel.h"
 
 @interface HeroModel : NSObject
 @property(nonatomic,copy)NSString *name; //姓名
@@ -20,6 +21,7 @@
 @property(nonatomic,copy)NSString *power;//力量
 @property(nonatomic,copy)NSString *quik;//敏捷
 @property(nonatomic,copy)NSString *intelligence;//智力
+@property(nonatomic,strong)HeroTypeModel *heroType;
 
 - (instancetype)initWithInfoDict:(NSDictionary*)infoDict;
 - (void)setHeroInfoWithDict:(NSDictionary*)infoDict;

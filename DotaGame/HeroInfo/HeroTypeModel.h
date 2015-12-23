@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 typedef enum{
     Hero_PowerType = -1,
-    Hero_QuikModel ,
-    Hero_IntelligenceModel
+    Hero_QuikType ,
+    Hero_IntelligenceType
 }HeroType;
 
 @interface HeroTypeModel : NSObject
