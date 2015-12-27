@@ -1,39 +1,30 @@
 //
-//  MainViewControllor.m
+//  DotaRootSceneController.m
 //  DotaGame
 //
-//  Created by psyche on 15/12/10.
+//  Created by psyche on 15/12/25.
 //  Copyright (c) 2015年 qianfeng. All rights reserved.
 //
 
-#import "MainViewControllor.h"
-#import "BattleFiledViewController.h"
+#import "DotaRootSceneController.h"
 #import "BattleModel.h"
+#import "PathHeader.h"
+#import "DotaPickBattleController.h"
 
+@interface DotaRootSceneController ()
 
+@property(nonatomic,strong)NSMutableArray *map;//地图 存储每一场战役
+@property(nonatomic) NSInteger currentMission;//目前通关到第几关
 
-@implementation MainViewControllor
-{
-    NSMutableArray *_map;//存储关卡的信息
-    //增加经验值，开启下一章地图
-}
-+(id)defaultMainViewContoller{
-    static MainViewControllor *mainVC = nil;
-    if (mainVC == nil) {
-        mainVC = [[MainViewControllor alloc] init];
-//        mainVC.currentBattleID = 1;//后期修改
-    }
+@end
 
-    return mainVC;
-}
+@implementation DotaRootSceneController
 
-
-- (void)viewDidLoad{
-    [super viewDidLoad];
-    
+- (void)didLoadScene{
+    [super didLoadScene];
     //创建关卡列表的数组
     [self createAllBattleData];
-
+    
     //创建UI界面
     [self refreshUI];
 
@@ -41,20 +32,21 @@
         [self scanData];
     }
 
+
 }
 
-//初始化字典的内容
+#pragma mark - data数据源
 - (void)createAllBattleData{
     
     //先从归档文件取，如果失败再从plist文件中读取
     NSArray *archiverArr = [NSKeyedUnarchiver unarchiveObjectWithFile:ARCHEVER_PATH];
     if (archiverArr.count != 0) {
-        _map = [[NSMutableArray alloc] initWithArray:archiverArr];
+        self.map = [[NSMutableArray alloc] initWithArray:archiverArr];
         return;
     }
     
     
-    _map = [[NSMutableArray alloc] init];
+    self.map = [[NSMutableArray alloc] init];
     
     NSArray *battleArray = [[NSArray alloc] initWithContentsOfFile:BATTLE_PATH];
     
@@ -71,7 +63,7 @@
     }
     
 }
-
+#pragma mark - UI
 - (void)refreshUI{
     NSMutableString *msg = [[NSMutableString alloc] initWithString:@"   刀塔传奇\n"];
     for (int i = 0; i<_map.count; i++) {
@@ -79,7 +71,7 @@
         [msg appendFormat:@"【第%ld关】 %@  ",model.mission,model.name];
         if (model.isPassed==YES) {
             [msg appendFormat:@"【通关】\n"];
-            self.currentBattleID = model.mission;
+            self.currentMission = model.mission;
         }else{
             [msg appendFormat:@"【未通关】\n"];
         }
@@ -90,19 +82,18 @@
     
 }
 
-
 - (void)scanData{
     NSLog(@"游戏操作说明:请输入关卡，开始战斗吧！输入0，刷新关卡列表\n");
     int inData;//输入的数据
     scanf("%d",&inData);
     
-    if (inData>self.currentBattleID+1) {
-        NSLog(@"亲，你目前才修炼到%lu关，不要操之过急哦~😁\n",self.currentBattleID+1);
+    if (inData>self.currentMission+1) {
+        NSLog(@"亲，你目前才修炼到%lu关，不要操之过急哦~😁\n",self.currentMission+1);
     }else if (inData == 0){
-    
+        
         [self refreshUI];
     }else {
-    //跳转到下一个界面,参数 所选的战役
+        //跳转到下一个界面,参数 所选的战役
         
         for (BattleModel *model in _map) {
             if (model.mission == inData) {
@@ -111,7 +102,7 @@
         }
         
         
-}
+    }
     
 }
 
@@ -119,20 +110,20 @@
 #pragma mark 推出到战场界面
 
 - (void)pushViewControllerWithBattle:(BattleModel*)battle{
-    BattleFiledViewController *battleVC = [[BattleFiledViewController alloc] init];
-    battleVC.battle = battle;
-    battleVC.pBlock = ^(BOOL isPassed){
-    
+    DotaPickBattleController *battleScene = [[DotaPickBattleController alloc] init];
+    battleScene.battle = battle;
+    battleScene.pBlock = ^(BOOL isPassed){
         //战役结束之后
         [self endOfWarWithBattle:battle withResult:isPassed];
-    
+        
     };
-    [battleVC viewDidLoad];
+    [battleScene didLoadScene];
     
-   }
+}
 
+//战斗结束之后 更新数据
 - (void)endOfWarWithBattle:(BattleModel*)battle withResult:(BOOL)isPassed{
-
+    
     if (isPassed) {
         for (BattleModel *model in _map) {
             if (model.mission == battle.mission) {
@@ -143,10 +134,11 @@
         [NSKeyedArchiver archiveRootObject:_map toFile:ARCHEVER_PATH];
         
     }
-
+    
     [self refreshUI];
-
+    
 }
+
 
 
 

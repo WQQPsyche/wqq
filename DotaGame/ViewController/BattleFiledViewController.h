@@ -14,6 +14,7 @@
 @interface BattleFiledViewController : RootViewController<HeroViewControllerDelegate>
 
 @property(nonatomic,strong)BattleModel *battle;
+@property(nonatomic,copy)void (^pBlock)(BOOL);
 
 - (void)refreshUI;
 @end

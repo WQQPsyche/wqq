@@ -31,4 +31,20 @@
 -(void)dealloc{
     self.magic = nil;
 }
+
+#pragma mark - 归档
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+    
+    [super encodeWithCoder:aCoder];
+    [aCoder encodeObject:self.magic forKey:@"magic"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder{
+    if (self = [super initWithCoder:aDecoder]) {
+        self.magic = [aDecoder decodeObjectForKey:@"magic"];
+    }
+    
+    return self;
+}
+
 @end

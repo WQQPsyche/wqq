@@ -13,7 +13,8 @@ typedef enum{
     Hero_IntelligenceType
 }HeroType;
 
-@interface HeroTypeModel : NSObject
+@interface HeroTypeModel : NSObject<NSCoding>
+
 
 @property(nonatomic) HeroType hero_type;
 @property(nonatomic,copy)NSString *heroTypeName;

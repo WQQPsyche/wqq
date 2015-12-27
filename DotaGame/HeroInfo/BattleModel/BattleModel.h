@@ -7,8 +7,10 @@
 //
 
 #import "DotaModel.h"
+
 //战役数据模型
-@interface BattleModel : DotaModel
+@interface BattleModel : DotaModel<NSCoding>
+
 @property(nonatomic) NSInteger  mission;//关卡
 @property(nonatomic,copy)NSString *name;//名字
 @property(nonatomic,copy)NSString *descri;//描述

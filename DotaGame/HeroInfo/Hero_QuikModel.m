@@ -30,4 +30,21 @@
 - (void)dealloc{
     self.dodge = nil;
 }
+#pragma mark - 归档
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+    
+    [super encodeWithCoder:aCoder];
+    [aCoder encodeObject:self.dodge forKey:@"dodge"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder{
+    if (self = [super initWithCoder:aDecoder]) {
+        self.dodge = [aDecoder decodeObjectForKey:@"dodge"];
+    }
+    
+    return self;
+}
+
+
+
 @end

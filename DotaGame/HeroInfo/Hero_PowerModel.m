@@ -30,4 +30,20 @@
 - (void)dealloc{
     self.protect = nil;
 }
+
+#pragma mark - 归档
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+
+    [super encodeWithCoder:aCoder];
+    [aCoder encodeObject:self.protect forKey:@"protect"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder{
+    if (self = [super initWithCoder:aDecoder]) {
+        self.protect = [aDecoder decodeObjectForKey:@"protect"];
+    }
+
+    return self;
+}
+
 @end

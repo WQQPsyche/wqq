@@ -11,6 +11,9 @@
 @interface MainViewControllor : RootViewController
 
 @property(nonatomic)NSUInteger currentBattleID;//当前游戏进行到第一关。
+
+@property(nonatomic,strong) NSMutableArray * pushedViewControllers;
+
 //单例
 + (id)defaultMainViewContoller;
 

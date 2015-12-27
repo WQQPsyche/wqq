@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5455A7491C2CE3FD00CA7412 /* DotaBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5455A7481C2CE3FD00CA7412 /* DotaBaseController.m */; };
+		5455A74C1C2CE52500CA7412 /* DotaSceneManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5455A74B1C2CE52500CA7412 /* DotaSceneManageController.m */; };
+		5455A74F1C2CE55700CA7412 /* DotaBaseController+SceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5455A74E1C2CE55700CA7412 /* DotaBaseController+SceneManager.m */; };
+		5455A7531C2CE98B00CA7412 /* DotaRootSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5455A7521C2CE98B00CA7412 /* DotaRootSceneController.m */; };
+		5455A7561C2CE9AD00CA7412 /* DotaPickBattleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5455A7551C2CE9AD00CA7412 /* DotaPickBattleController.m */; };
+		5455A7591C2CE9C500CA7412 /* DotaPickHeroController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5455A7581C2CE9C500CA7412 /* DotaPickHeroController.m */; };
 		5459998C1C192C16002DB3EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5459998B1C192C16002DB3EA /* main.m */; };
-		545999941C192C45002DB3EA /* MainViewControllor.m in Sources */ = {isa = PBXBuildFile; fileRef = 545999931C192C45002DB3EA /* MainViewControllor.m */; };
-		5470EBDB1C1AB5470036959B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5470EBDA1C1AB5470036959B /* RootViewController.m */; };
-		5470EBE61C1AC1470036959B /* BattleFiledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5470EBE51C1AC1470036959B /* BattleFiledViewController.m */; };
 		547C52F11C2657370019289F /* HeroModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C52F01C2657370019289F /* HeroModel.m */; };
 		547C52FD1C265E680019289F /* Hero_PowerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C52FC1C265E680019289F /* Hero_PowerModel.m */; };
 		547C53001C265E790019289F /* Hero_QuikModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C52FF1C265E790019289F /* Hero_QuikModel.m */; };
@@ -19,7 +22,6 @@
 		5486E96F1C27C6B600E0B55B /* HeroTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5486E96E1C27C6B600E0B55B /* HeroTypeModel.m */; };
 		5486E9721C27C95900E0B55B /* DotaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5486E9711C27C95900E0B55B /* DotaModel.m */; };
 		5486E9751C27CA0000E0B55B /* BattleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5486E9741C27CA0000E0B55B /* BattleModel.m */; };
-		54CCC1271C212D9D00E3A7C4 /* HeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CCC1261C212D9D00E3A7C4 /* HeroViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,19 +37,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5455A7471C2CE3FD00CA7412 /* DotaBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DotaBaseController.h; path = Dotakit/DotaBaseController.h; sourceTree = SOURCE_ROOT; };
+		5455A7481C2CE3FD00CA7412 /* DotaBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DotaBaseController.m; path = Dotakit/DotaBaseController.m; sourceTree = SOURCE_ROOT; };
+		5455A74A1C2CE52500CA7412 /* DotaSceneManageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DotaSceneManageController.h; path = Dotakit/DotaSceneManageController.h; sourceTree = SOURCE_ROOT; };
+		5455A74B1C2CE52500CA7412 /* DotaSceneManageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DotaSceneManageController.m; path = Dotakit/DotaSceneManageController.m; sourceTree = SOURCE_ROOT; };
+		5455A74D1C2CE55700CA7412 /* DotaBaseController+SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DotaBaseController+SceneManager.h"; path = "Dotakit/DotaBaseController+SceneManager.h"; sourceTree = SOURCE_ROOT; };
+		5455A74E1C2CE55700CA7412 /* DotaBaseController+SceneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DotaBaseController+SceneManager.m"; path = "Dotakit/DotaBaseController+SceneManager.m"; sourceTree = SOURCE_ROOT; };
+		5455A7511C2CE98B00CA7412 /* DotaRootSceneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DotaRootSceneController.h; path = DotaSceneViewController/DotaRootSceneController.h; sourceTree = SOURCE_ROOT; };
+		5455A7521C2CE98B00CA7412 /* DotaRootSceneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DotaRootSceneController.m; path = DotaSceneViewController/DotaRootSceneController.m; sourceTree = SOURCE_ROOT; };
+		5455A7541C2CE9AD00CA7412 /* DotaPickBattleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DotaPickBattleController.h; path = DotaSceneViewController/DotaPickBattleController.h; sourceTree = SOURCE_ROOT; };
+		5455A7551C2CE9AD00CA7412 /* DotaPickBattleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DotaPickBattleController.m; path = DotaSceneViewController/DotaPickBattleController.m; sourceTree = SOURCE_ROOT; };
+		5455A7571C2CE9C500CA7412 /* DotaPickHeroController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DotaPickHeroController.h; path = DotaSceneViewController/DotaPickHeroController.h; sourceTree = SOURCE_ROOT; };
+		5455A7581C2CE9C500CA7412 /* DotaPickHeroController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DotaPickHeroController.m; path = DotaSceneViewController/DotaPickHeroController.m; sourceTree = SOURCE_ROOT; };
 		545999881C192C16002DB3EA /* DotaGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DotaGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		5459998B1C192C16002DB3EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		545999921C192C45002DB3EA /* MainViewControllor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewControllor.h; sourceTree = "<group>"; };
-		545999931C192C45002DB3EA /* MainViewControllor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllor.m; sourceTree = "<group>"; };
 		545D46A41C19C0E7007C7E42 /* battle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = battle.plist; path = Resource/battle.plist; sourceTree = SOURCE_ROOT; };
 		545D6BDE1C20456900B9B0C9 /* 力量型英雄.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "力量型英雄.plist"; path = "Resource/力量型英雄.plist"; sourceTree = SOURCE_ROOT; };
 		545D6BDF1C20456900B9B0C9 /* 敏捷型英雄.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "敏捷型英雄.plist"; path = "Resource/敏捷型英雄.plist"; sourceTree = SOURCE_ROOT; };
 		545D6BE01C20456900B9B0C9 /* 智慧型英雄.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "智慧型英雄.plist"; path = "Resource/智慧型英雄.plist"; sourceTree = SOURCE_ROOT; };
-		5470EBD91C1AB5470036959B /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../ViewController/RootViewController.h; sourceTree = "<group>"; };
-		5470EBDA1C1AB5470036959B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../ViewController/RootViewController.m; sourceTree = "<group>"; };
 		5470EBE11C1AB9420036959B /* PathHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathHeader.h; path = ../Others/PathHeader.h; sourceTree = "<group>"; };
-		5470EBE41C1AC1470036959B /* BattleFiledViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BattleFiledViewController.h; path = ViewController/BattleFiledViewController.h; sourceTree = SOURCE_ROOT; };
-		5470EBE51C1AC1470036959B /* BattleFiledViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BattleFiledViewController.m; path = ViewController/BattleFiledViewController.m; sourceTree = SOURCE_ROOT; };
 		547C52EF1C2657370019289F /* HeroModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeroModel.h; path = HeroInfo/HeroModel.h; sourceTree = "<group>"; };
 		547C52F01C2657370019289F /* HeroModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeroModel.m; path = HeroInfo/HeroModel.m; sourceTree = "<group>"; };
 		547C52FB1C265E680019289F /* Hero_PowerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hero_PowerModel.h; path = HeroInfo/Hero_PowerModel.h; sourceTree = "<group>"; };
@@ -64,8 +72,6 @@
 		5486E9711C27C95900E0B55B /* DotaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DotaModel.m; path = Others/DotaModel.m; sourceTree = SOURCE_ROOT; };
 		5486E9731C27CA0000E0B55B /* BattleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BattleModel.h; path = HeroInfo/BattleModel/BattleModel.h; sourceTree = SOURCE_ROOT; };
 		5486E9741C27CA0000E0B55B /* BattleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BattleModel.m; path = HeroInfo/BattleModel/BattleModel.m; sourceTree = SOURCE_ROOT; };
-		54CCC1251C212D9D00E3A7C4 /* HeroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeroViewController.h; path = ViewController/HeroViewController.h; sourceTree = SOURCE_ROOT; };
-		54CCC1261C212D9D00E3A7C4 /* HeroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeroViewController.m; path = ViewController/HeroViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5455A7461C2CE3BC00CA7412 /* DotaKit */ = {
+			isa = PBXGroup;
+			children = (
+				5455A7471C2CE3FD00CA7412 /* DotaBaseController.h */,
+				5455A7481C2CE3FD00CA7412 /* DotaBaseController.m */,
+				5455A74A1C2CE52500CA7412 /* DotaSceneManageController.h */,
+				5455A74B1C2CE52500CA7412 /* DotaSceneManageController.m */,
+				5455A74D1C2CE55700CA7412 /* DotaBaseController+SceneManager.h */,
+				5455A74E1C2CE55700CA7412 /* DotaBaseController+SceneManager.m */,
+			);
+			name = DotaKit;
+			sourceTree = "<group>";
+		};
+		5455A7501C2CE8F900CA7412 /* DotaSceneController */ = {
+			isa = PBXGroup;
+			children = (
+				5455A7511C2CE98B00CA7412 /* DotaRootSceneController.h */,
+				5455A7521C2CE98B00CA7412 /* DotaRootSceneController.m */,
+				5455A7541C2CE9AD00CA7412 /* DotaPickBattleController.h */,
+				5455A7551C2CE9AD00CA7412 /* DotaPickBattleController.m */,
+				5455A7571C2CE9C500CA7412 /* DotaPickHeroController.h */,
+				5455A7581C2CE9C500CA7412 /* DotaPickHeroController.m */,
+			);
+			name = DotaSceneController;
+			sourceTree = "<group>";
+		};
 		5459997F1C192C16002DB3EA = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +131,10 @@
 			isa = PBXGroup;
 			children = (
 				545D46A31C19C0A7007C7E42 /* Resource */,
+				5455A7461C2CE3BC00CA7412 /* DotaKit */,
+				5455A7501C2CE8F900CA7412 /* DotaSceneController */,
 				5481830E1C2A699F003BA9E3 /* Tool */,
 				547C52EE1C2657130019289F /* Model */,
-				5481830D1C2A6970003BA9E3 /* ViewController */,
 				5459998B1C192C16002DB3EA /* main.m */,
 			);
 			path = DotaGame;
@@ -138,21 +171,6 @@
 			);
 			name = Model;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		5481830D1C2A6970003BA9E3 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				5470EBD91C1AB5470036959B /* RootViewController.h */,
-				5470EBDA1C1AB5470036959B /* RootViewController.m */,
-				545999921C192C45002DB3EA /* MainViewControllor.h */,
-				545999931C192C45002DB3EA /* MainViewControllor.m */,
-				5470EBE41C1AC1470036959B /* BattleFiledViewController.h */,
-				5470EBE51C1AC1470036959B /* BattleFiledViewController.m */,
-				54CCC1251C212D9D00E3A7C4 /* HeroViewController.h */,
-				54CCC1261C212D9D00E3A7C4 /* HeroViewController.m */,
-			);
-			name = ViewController;
 			sourceTree = "<group>";
 		};
 		5481830E1C2A699F003BA9E3 /* Tool */ = {
@@ -224,14 +242,16 @@
 				547C53031C265E940019289F /* Hero_IntelligenceModel.m in Sources */,
 				5459998C1C192C16002DB3EA /* main.m in Sources */,
 				547C52F11C2657370019289F /* HeroModel.m in Sources */,
-				5470EBE61C1AC1470036959B /* BattleFiledViewController.m in Sources */,
-				545999941C192C45002DB3EA /* MainViewControllor.m in Sources */,
+				5455A7531C2CE98B00CA7412 /* DotaRootSceneController.m in Sources */,
+				5455A7591C2CE9C500CA7412 /* DotaPickHeroController.m in Sources */,
+				5455A7561C2CE9AD00CA7412 /* DotaPickBattleController.m in Sources */,
+				5455A74F1C2CE55700CA7412 /* DotaBaseController+SceneManager.m in Sources */,
 				547C53061C2698E70019289F /* WQQTools.m in Sources */,
 				5486E96F1C27C6B600E0B55B /* HeroTypeModel.m in Sources */,
-				54CCC1271C212D9D00E3A7C4 /* HeroViewController.m in Sources */,
 				5486E9751C27CA0000E0B55B /* BattleModel.m in Sources */,
 				547C53001C265E790019289F /* Hero_QuikModel.m in Sources */,
-				5470EBDB1C1AB5470036959B /* RootViewController.m in Sources */,
+				5455A7491C2CE3FD00CA7412 /* DotaBaseController.m in Sources */,
+				5455A74C1C2CE52500CA7412 /* DotaSceneManageController.m in Sources */,
 				547C52FD1C265E680019289F /* Hero_PowerModel.m in Sources */,
 				5486E9721C27C95900E0B55B /* DotaModel.m in Sources */,
 			);

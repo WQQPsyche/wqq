@@ -14,7 +14,8 @@
 #import <Foundation/Foundation.h>
 #import "HeroTypeModel.h"
 
-@interface HeroModel : NSObject
+@interface HeroModel : NSObject<NSCoding>
+
 @property(nonatomic,copy)NSString *name; //姓名
 @property(nonatomic,copy)NSString *MP; //生命值
 @property(nonatomic,copy)NSString *ATK;//攻击力

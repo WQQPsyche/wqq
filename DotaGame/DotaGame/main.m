@@ -7,17 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MainViewControllor.h"
+#import "DotaRootSceneController.h"
+#import "DotaSceneManageController.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
        
-        MainViewControllor *mainVC = [MainViewControllor defaultMainViewContoller];
-        [mainVC viewDidLoad];
+        //注意：请先修改文件的路径 具体见工程中Tool/PathHeader.h文件 谢谢
         
-//        NSArray *array = @[@{@"name":}]
-        
-        
+        DotaRootSceneController *rootSecen = [[DotaRootSceneController alloc] init];
+        [DotaSceneManageController startWithRootScene:rootSecen];
         
         
     }
